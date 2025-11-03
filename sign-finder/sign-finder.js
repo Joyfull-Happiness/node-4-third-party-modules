@@ -17,7 +17,9 @@ const inputMonth = Number(process.argv[3]);
 const inputYear = Number(process.argv[4]);
 
 async function birthSigns() {
-  const astrologySign = getSign({ inputMonth, inputDay });
+  // parenthesies are holding an object which have two key value pairs,
+  // when we make an object we need to define the name of the key and each keys value
+  const astrologySign = getSign({ month: inputMonth, day: inputDay });
 
   const chineseZodiac = getZodiac(inputYear);
 
